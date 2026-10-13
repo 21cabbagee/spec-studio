@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-slate-100 antialiased font-sans selection:bg-cyan-500/30 selection:text-cyan-200;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2436;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3a54;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.25);
+}
+.glow-indigo {
+  box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.25);
+}
+.glow-emerald {
+  box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.25);
+}
+
+/* Background grid */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Watermark diagonal repeated text */
+.watermark-pattern {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.04) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+}
