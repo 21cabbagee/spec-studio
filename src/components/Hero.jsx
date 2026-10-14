@@ -1,10 +1,12 @@
 import React from 'react';
 import { Video, Sparkles, ArrowRight, ShieldCheck, DollarSign, CheckCircle2, AlertTriangle, Layers, Zap } from 'lucide-react';
+import ParticlesCanvas from './ParticlesCanvas';
 
 export function Hero({ onOpenGenerator, onScrollToCatalog, onScrollToCalculator }) {
   return (
     <section className="relative overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-border/60">
-      {/* Background glow & grid */}
+      {/* Background WebGL particle simulator & glow */}
+      <ParticlesCanvas particleColor="6, 182, 212" particleCount={55} />
       <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[320px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[400px] h-[250px] bg-indigo-500/10 blur-[140px] rounded-full pointer-events-none" />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import OutcomeChart from './components/OutcomeChart';
 import { SpecGenerator } from './components/SpecGenerator';
 import { OutboundConsole } from './components/OutboundConsole';
 import { MarginCalculator } from './components/MarginCalculator';
@@ -99,6 +100,9 @@ export default function App() {
           onScrollToCatalog={scrollToCatalog}
           onScrollToCalculator={scrollToCalculator}
         />
+
+        {/* Outcome Data Chart (Julien Bek $1:$6 Sequoia Framework + Larry Ellison ROI Engine) */}
+        <OutcomeChart onCtaClick={scrollToGenerator} />
 
         <SpecGenerator
           onGenerateSpec={handleGenerateSpec}
